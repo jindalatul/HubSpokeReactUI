@@ -1,0 +1,180 @@
+  :root{
+    --bg:#fff; --text:#1f2937; --muted:#6b7280; --border:#e5e7eb; --ring:#3b82f6;
+  }
+
+  .subheader{
+    position:sticky; top:48px; /* adjust if your navbar height differs */
+    /*z-index:5;*/
+    background:var(--bg);
+    border-bottom:1px solid var(--border);
+  }
+  .subheader-inner{
+    /*max-width:1200px;*/ margin:0 auto; padding:10px 14px;
+    display:flex; align-items:center; gap:12px;
+  }
+  .subheader h1{
+    margin:0; font-size:16px; font-weight:600; color:var(--text);
+  }
+  .actions{ margin-left:auto; display:flex; align-items:center; gap:8px; }
+
+  /* Buttons (square corners, thin borders, small text) */
+  .btn{
+    display:inline-flex; align-items:center; gap:6px;
+    padding:6px 10px; font-size:12px; color:#374151; background:#fff;
+    border:1px solid var(--border); border-radius:0; cursor:pointer;
+  }
+  .btn:hover{ background:#f8fafc; }
+  .btn:focus{ outline:2px solid rgba(59,130,246,.2); outline-offset:1px; }
+
+  /* Toggle pressed state */
+  .btn.toggle[aria-pressed="true"]{
+    background:#f1f5f9; border-color:#cbd5e1; font-weight:600;
+  }
+
+  /* Export dropdown */
+  .dropdown{ position:relative; }
+  .menu{
+    position:absolute; right:0; top:100%; margin-top:6px; min-width:200px;
+    background:#fff; border:1px solid var(--border); border-radius:0;
+    box-shadow:0 8px 24px rgba(0,0,0,.06); display:none; z-index:10;
+  }
+  .menu.open{ display:block; }
+  .menu button{
+    width:100%; text-align:left; padding:8px 10px; font-size:12px; color:#374151;
+    background:#fff; border:0; border-top:1px solid var(--border); cursor:pointer;
+  }
+  .menu button:first-child{ border-top:none; }
+  .menu button:hover{ background:#f8fafc; }
+  .menu button[disabled]{ color:#94a3b8; cursor:not-allowed; background:#fff; }
+
+  /* Metrics section */
+
+    /* ===== One-row overview (no charts) ===== */
+  .row-hub{display:grid;grid-template-columns: repeat(7, minmax(140px,1fr));gap:12px}
+  .wide{grid-column: span 2;}
+
+  .tile{
+    position:relative; background:#fff; border:1px solid var(--border); border-radius:0;
+    padding:10px; display:flex; flex-direction:column; gap:6px; min-width:0;
+  }
+  .title{display:flex; align-items:center; gap:6px; font-size:12px; color:#374151; font-weight:600; margin:0}
+  .value{font-size:24px; line-height:1.1; font-weight:700; font-variant-numeric:tabular-nums}
+  .sub{font-size:11px; color:#9ca3af}
+  .trend{display:inline-flex; align-items:center; gap:6px; font-size:12px}
+  .up{color:var(--good)} .flat{color:#64748b} .down{color:var(--bad)}
+
+  .info{
+    position:absolute; top:8px; right:8px; width:18px; height:18px; display:grid; place-items:center;
+    border:1px solid var(--border); border-radius:999px; font-size:12px; color:#475569; background:#fff; cursor:help;
+  }
+  .tooltip{
+    position:absolute; top:28px; right:8px; z-index:10; max-width:240px;
+    padding:8px; border:1px solid var(--border); background:#fff; color:#374151; font-size:12px;
+    box-shadow:0 8px 24px rgba(0,0,0,.06); display:none;
+  }
+  .info:focus + .tooltip, .info:hover + .tooltip { display:block; }
+
+  /* Ranking progress */
+  .badge-big{
+    font-weight:700; font-size:20px; display:inline-flex; align-items:center; gap:6px;
+    padding:4px 8px; border:1px solid var(--border); background:#f8fafc;
+  }
+  .rank-label{font-size:12px; color:#64748b; font-weight:600; padding-left:10px;}
+  .bar{height:10px; background:#eef2f7; border:1px solid var(--border); position:relative; overflow:hidden}
+  .fill{position:absolute; inset:0; width:0%; transition:width .9s cubic-bezier(.2,.7,.2,1)}
+  .fill.good{background:linear-gradient(90deg,#22c55e,#84cc16)}
+  .fill.warn{background:linear-gradient(90deg,#f59e0b,#fbbf24)}
+  .fill.bad{background:linear-gradient(90deg,#ef4444,#f97316)}
+
+
+    .mix {
+    display: flex;
+    gap: 8px;       /* spacing between blocks */
+  }
+
+  .mix .block {
+    flex: 1;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    text-align: center;
+    padding: 6px 4px;    /* compact height */
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .mix .block .name {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 2px;
+  }
+
+  .mix .block .pct {
+    font-size: 14px;
+    font-weight: 600;
+  }
+
+  /* specific colors */
+  .mix .block.easy {
+    background-color: #ecfdf5;   /* light green */
+  }
+  .mix .block.med {
+    background-color: #fffbeb;   /* light yellow */
+  }
+  .mix .block.hard {
+    background-color: #fef2f2;   /* light red */
+  }
+
+    /* Helper hint under subheader */
+.subhint
+{
+    max-width:1200px;
+    font-size:11px; 
+    color:#6b7280;
+    max-width:100%; 
+    width:100% !important; 
+    margin: 0 auto; 
+    padding: 10px 0px 0px 0px !important;
+}
+
+  /* ===== Hub–Spoke workspace ===== */
+  .workspace{display:flex; gap:20px; margin-top:20px; margin-top:16px}
+  .panel{border:1px solid var(--border); background:#fff; border-radius:0; min-height:420px; overflow:auto}
+
+  /* Hubs list */
+  .panel h3{margin:10px; font-size:13px; color:#374151}
+  .hub{padding:12px; border-top:1px solid var(--border); cursor:pointer}
+  .hub:first-of-type{border-top:0}
+  .hub .t{font-weight:600}
+  .hub .m{display:flex;gap:8px;font-size:12px;color:#64748b;margin-top:4px;flex-wrap:wrap}
+  .pill{display:inline-block;border:1px solid var(--border);padding:2px 6px}
+  .hub.active{background:#f8fafc; outline:2px solid rgba(59,130,246,.15)}
+
+  /* Spokes table */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  thead th{position:sticky;top:0;background:#f1f5f9;border-bottom:1px solid var(--border);text-align:left;padding:10px;color:#334155;font-weight:600}
+  tbody td{border-top:1px solid var(--border);padding:10px}
+  tbody tr:hover{background:#f8fafc}
+  .badge2{font-size:12px;border:1px solid var(--border);padding:2px 6px}
+  .easy{color:#065f46;border-color:#a7f3d0;background:#ecfdf5}
+  .med{color:#92400e;border-color:#fde68a;background:#fffbeb}
+  .hard{color:#991b1b;border-color:#fecaca;background:#fef2f2}
+  .dbl{user-select:none}
+
+.hubs-left
+{
+    flex:0 0 30%; 
+    border:1px solid #ccc; 
+    padding:10px; 
+    max-height:400px; 
+    overflow-y:auto;
+}
+.spokes-right
+{
+    flex:0 0 69%; 
+    border:1px solid #ccc; 
+    padding:10px; 
+    max-height:400px; 
+    overflow-y:auto;
+}
