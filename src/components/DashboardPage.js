@@ -4,7 +4,9 @@ import mapData from "../mapData.js";
 
 import TopNav from './common/topNav.js';
 import Footer from './common/footer.js';
-import HubSpokeMindMapView from "./hubspoke/horizontal/HubSpokeMindMapView.js";
+import LoadingSpinner  from "./common/loadingSpinner.js";
+
+import HubSpokeMindMapView from "./hubspoke/mindmap/HubSpokeMindMapView.js";
 import HubSpokeTableView from "./hubspoke/table/HubSpokeTableView.js";
 
 // Lets fetch Data here for Hubs and Spokes using API. And pass data in Props.
@@ -18,21 +20,33 @@ export default function DashboardPage()
       const [loading, setLoading] = useState(true);
       const [error, setError] = useState("");
 
-    function fetchDataFromAPI()
-    {
-        // lets call AJAX here to fetch API and everything will work as expected.
-        // Include a loader. for fetching data.
-        setHubSpokeData(mapData);
-    }
-
     function handleToggle() 
     {
         setShowFirstView(!showFirstView);
     }
 
+    // replace this API, and then reduce delay to 10ms instead of 2 sec.
+
     useEffect(() => {
-        fetchDataFromAPI();
+        fetch("http://localhost:3000/mapData.json")
+        .then((response) => response.json())
+        .then((json) => {
+            // Add artificial delay to show loading
+            setTimeout(() => {
+            setHubSpokeData(json);
+            setLoading(false);
+            }, 2000); // 2 second delay
+        })
+        .catch((error) => {
+            console.error("Error fetching data:", error);
+            setLoading(false);
+        });
+        console.log(hubSpokeData);
     }, []);
+
+    if (loading) {
+        return <LoadingSpinner message="Building Hub Spokes"/>;
+    }
 
     return (
         <>
@@ -43,7 +57,7 @@ export default function DashboardPage()
                     }}>
                         {/* Button text changes based on state */}
                         <button onClick={handleToggle}>
-                            {showFirstView ? "Show MindMap" : "Show Detailed"}
+                            {showFirstView ? "Show Detailed" : "Show MindMap"}
                         </button>
                 </div>
                 
@@ -54,8 +68,9 @@ export default function DashboardPage()
                         paddingBottom: "20px",
                     }}>
                 {/* Conditionally render components */}      
-                {showFirstView ? <HubSpokeTableView hubSpokesData={hubSpokeData} /> : <HubSpokeMindMapView hubSpokesData={hubSpokeData} />}  
+                {showFirstView ? <HubSpokeMindMapView hubSpokesData={hubSpokeData} /> : <HubSpokeTableView hubSpokesData={hubSpokeData} />}  
                 </div>
+                
             <Footer></Footer>
         </>
      );

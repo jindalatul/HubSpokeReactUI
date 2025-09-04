@@ -5,7 +5,7 @@ import TopNav from "../../common/topNav.js";
 import Footer  from "../../common/footer.js";
 import transformToJsMind from "./convertFormat.js";
 
-import SimpleMindMap from "./HubSpokeHorizontal.js";
+import SimpleMindMap from "./HubSpokeMindMap.js";
 
 export default function HubSpokeMindMapView({hubSpokesData})
 {

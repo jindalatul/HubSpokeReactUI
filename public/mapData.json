@@ -1,4 +1,4 @@
-const mapData = {
+{
   "hubs": [
     {
       "id": "hub1",
@@ -287,6 +287,4 @@ const mapData = {
       ]
     }
   ]
-};
-
-export default mapData;
+}

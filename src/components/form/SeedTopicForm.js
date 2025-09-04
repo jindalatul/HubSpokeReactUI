@@ -8,7 +8,7 @@ function SeedTopicForm()
 
   const navigate = useNavigate();
 
-  const isUserPremium=true;
+  const isUserPremium=false;
   const [keywordSelected, setKeywordSelected] = useState(false);
 
   const handleFormSubmit = (e) => {
@@ -24,7 +24,7 @@ function SeedTopicForm()
 
 
   const handleKeywordClick = () => {
-    if(isUserPremium==false) 
+    if(isUserPremium!=true) 
       {
         kwUpsell.current.style.display = "block";
         setKeywordSelected(false); 

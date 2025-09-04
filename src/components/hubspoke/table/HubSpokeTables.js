@@ -20,6 +20,13 @@ export default function HubSpokeTables({myData})
     console.log(myData);
     const hubs = Array.isArray(myData?.hubs) ? myData.hubs : [];
 
+    // Select first hub on mount (or when hubs change)
+    useEffect(() => {
+        if (hubs.length > 0) {
+            setSelectedHub(hubs[0]);
+        }
+    }, [hubs]);
+
     return (
     <>
     <div className="subhint">💡 Double‑click any hub or spoke to open details.</div>
@@ -32,7 +39,7 @@ export default function HubSpokeTables({myData})
 
             {/*<!-- hubs injected --> */}
                 {
-                    hubs.map((hub) => (
+                    hubs.map((hub, index) => (
                     <div className="hub dbl" key={hub.id} onClick={() => setSelectedHub(hub)}
                          style={{
                                 cursor: "pointer",
