@@ -15,10 +15,10 @@ function SeedTopicForm()
     e.preventDefault();
     
     // Create a project using AJAX. And Save all Form Data in DB and get projectid
-    const projectId = "Project";
+    const projectId = "ProjectId:1";
     if (!projectId) return;
 
-    navigate(`/hub-spoke/${projectId}`);        // Go to /hub-spoke page and put the seed in the URL
+    navigate(`/dashboard/${projectId}`);        // Go to /hub-spoke page and put the seed in the URL
   };
 
 

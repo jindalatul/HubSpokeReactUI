@@ -3,7 +3,7 @@ function TopNav()
   return (
   <header className="topbar">
     <div className="badge">TA</div>
-    <div className="brand">Topical Authority</div>
+    <div className="brand">Topical Authority Builder</div>
     <nav className="nav">
       <a>Dashboard</a>
       <a>Projects</a>

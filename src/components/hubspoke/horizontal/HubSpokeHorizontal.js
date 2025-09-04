@@ -1,9 +1,13 @@
 import { useEffect, useRef } from "react";
 
-export default function SimpleMindMap() {
+export default function SimpleMindMap({mindmap}) {
   const containerRef = useRef(null);
   const initedRef = useRef(false);
 
+  console.log(mindmap);
+  
+  //return false;
+  
   useEffect(() => {
     if (initedRef.current) return;
     initedRef.current = true;
@@ -13,26 +17,18 @@ export default function SimpleMindMap() {
       console.error("window.jsMind is undefined. Check jsMind <script> in public/index.html.");
       return;
     }
-
-    // --- BIG DATASET: 15 hubs, each 10–15 spokes ---
-    const mind = makeLargeMind({
-      seed: "Glamping",
-      hubCount: 15,
-      minSpokes: 10,
-      maxSpokes: 15,
-    });
-
-    console.log(mind);
+    
+    //console.log(mind);
     
     const jm = new JM({
       container: containerRef.current, // same pattern you had working
       editable: false,
       theme: "primary",
-      view: { hmargin: 80, vmargin: 60, line_width: 0.4, line_color: "#cbd5e1" },
-      layout: { hspace: 480, vspace: 22, pspace: 20 },
+      view: { hmargin: 80, vmargin: 30, line_width: 0.4, line_color: "#cbd5e1" },
+      layout: { hspace: 280, vspace: 22, pspace: 20 },
     });
 
-    jm.show(mind);
+    jm.show(mindmap);
 
     // 1) Hide expanders (CSS after jsmind.css)
     const style = document.createElement("style");
