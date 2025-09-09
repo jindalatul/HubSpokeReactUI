@@ -89,7 +89,6 @@ export default function SimpleMindMap(props) {
     {
       props.handleHubSpokeMindMapClick(showSidebar,nodeId);
     }
-    if (!isHub)  return;
       
       // collapse other hubs
       (rootNode.children || []).forEach((child) => {
