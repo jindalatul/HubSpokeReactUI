@@ -12,7 +12,7 @@ export default function HubSpokeHeader() {
                     
                     <div className="actions">
                         <small id="ver">v1.0 | v1.1</small>
-                        <button id="exportBtn" className="btn" type="button" aria-haspopup="menu" aria-expanded="false" aria-controls="exportMenu">
+                        <button id="exportBtn" className="btn" type="button">
                         ⬇ Export
                         </button>
                     </div>

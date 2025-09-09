@@ -42,7 +42,7 @@ function SeedTopicForm()
 
 return (
 <form>
-  <div className="wrap">
+  <div className="wrap main-form">
     <div className="section">
       <h1>Generate your Hub‑Spoke</h1>
       <p>Enter a seed keyword or topic to get started.</p>
@@ -67,7 +67,7 @@ return (
           </span>
           <span>Include Keywords</span>
         </button>
-        <button className="btn primary" onClick={handleFormSubmit}>Generate</button>
+        <button className="btn-form primary" onClick={handleFormSubmit}>Generate</button>
       </div>
         <div id="kwUpsell" className="upsell" ref={kwUpsell}
               style={{display: "none"}}>

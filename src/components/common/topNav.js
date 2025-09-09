@@ -2,8 +2,8 @@ function TopNav()
 {
   return (
   <header className="topbar">
-    <div className="badge">TA</div>
-    <div className="brand">Topical Authority Builder</div>
+    <div className="badge">CR</div>
+    <div className="brand">Content Builder</div>
     <nav className="nav">
       <a>Dashboard</a>
       <a>Projects</a>

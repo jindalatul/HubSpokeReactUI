@@ -1,0 +1,290 @@
+{
+  "hubs": [
+    {
+      "id": "hub1",
+      "topic": "Top Glamping Destinations",
+      "spokes": [
+        { "id": "s1", "topic": "California Coastline Yurts" },
+        { "id": "s2", "topic": "Yosemite Safari Tents" },
+        { "id": "s3", "topic": "Texas Hill Country Domes" },
+        { "id": "s4", "topic": "Colorado Mountain Cabins" },
+        { "id": "s5", "topic": "Utah Desert Stargazing Domes" },
+        { "id": "s6", "topic": "Oregon Coastal Treehouses" },
+        { "id": "s7", "topic": "Montana Ranch Glamping" },
+        { "id": "s8", "topic": "New York Catskills A-Frames" },
+        { "id": "s9", "topic": "Smoky Mountains Tree Cabins" },
+        { "id": "s10", "topic": "Florida Everglades Eco Lodges" },
+        { "id": "s11", "topic": "Arizona Desert Tipis" },
+        { "id": "s12", "topic": "Washington Rainforest Stays" },
+        { "id": "s13", "topic": "Vermont Autumn Yurts" },
+        { "id": "s14", "topic": "Maine Coastal Safari Tents" },
+        { "id": "s15", "topic": "Alaska Wilderness Domes" },
+        { "id": "s16", "topic": "Hawaii Volcano Retreats" },
+        { "id": "s17", "topic": "Oklahoma Prairie Domes" },
+        { "id": "s18", "topic": "Idaho Hot Spring Cabins" }
+      ]
+    },
+    {
+      "id": "hub2",
+      "topic": "Luxury Experiences",
+      "spokes": [
+        { "id": "s21", "topic": "On-Site Chefs" },
+        { "id": "s22", "topic": "Private Hot Tubs" },
+        { "id": "s23", "topic": "Butler Service" },
+        { "id": "s24", "topic": "Spa Treatments" },
+        { "id": "s25", "topic": "Wine & Food Pairing" },
+        { "id": "s26", "topic": "Helicopter Arrival" },
+        { "id": "s27", "topic": "Infinity Pools" },
+        { "id": "s28", "topic": "Five-Star Bedding" },
+        { "id": "s29", "topic": "Fireplace Domes" },
+        { "id": "s30", "topic": "Private Guides" },
+        { "id": "s31", "topic": "Yoga & Wellness Packages" },
+        { "id": "s32", "topic": "Personalized Excursions" },
+        { "id": "s33", "topic": "Exclusive Wine Cellars" },
+        { "id": "s34", "topic": "Luxury Safari Lodges" },
+        { "id": "s35", "topic": "Concierge Planning" },
+        { "id": "s36", "topic": "Champagne Welcome" },
+        { "id": "s37", "topic": "Designer Interiors" }
+      ]
+    },
+    {
+      "id": "hub3",
+      "topic": "Budget Glamping",
+      "spokes": [
+        { "id": "s41", "topic": "DIY Tent Platforms" },
+        { "id": "s42", "topic": "Off-Season Discounts" },
+        { "id": "s43", "topic": "Shared Facilities" },
+        { "id": "s44", "topic": "Bring Your Own Gear" },
+        { "id": "s45", "topic": "Public Lands Glamping" },
+        { "id": "s46", "topic": "Converted Vans" },
+        { "id": "s47", "topic": "Tiny Cabin Rentals" },
+        { "id": "s48", "topic": "Hostel-Style Domes" },
+        { "id": "s49", "topic": "Campground Yurts" },
+        { "id": "s50", "topic": "Local Discount Clubs" },
+        { "id": "s51", "topic": "DIY Solar Showers" },
+        { "id": "s52", "topic": "Minimalist Stays" },
+        { "id": "s53", "topic": "Community Fire Pits" },
+        { "id": "s54", "topic": "Bring Your Own Food" },
+        { "id": "s55", "topic": "Eco Hostels" },
+        { "id": "s56", "topic": "Student-Friendly Camps" }
+      ]
+    },
+    {
+      "id": "hub4",
+      "topic": "Family-Friendly Stays",
+      "spokes": [
+        { "id": "s61", "topic": "Kid-Safe Platforms" },
+        { "id": "s62", "topic": "Family Tents" },
+        { "id": "s63", "topic": "Playgrounds on Site" },
+        { "id": "s64", "topic": "Petting Zoos" },
+        { "id": "s65", "topic": "Group Fire Circles" },
+        { "id": "s66", "topic": "Shared Kitchens" },
+        { "id": "s67", "topic": "Board Games & Books" },
+        { "id": "s68", "topic": "Safe Hiking Trails" },
+        { "id": "s69", "topic": "Outdoor Movie Nights" },
+        { "id": "s70", "topic": "Family Picnic Areas" },
+        { "id": "s71", "topic": "Stroller-Friendly Paths" },
+        { "id": "s72", "topic": "Babysitting Services" },
+        { "id": "s73", "topic": "Family Meal Packages" },
+        { "id": "s74", "topic": "Large Multi-Room Tents" },
+        { "id": "s75", "topic": "Adventure Camps" },
+        { "id": "s76", "topic": "Teen Adventure Programs" }
+      ]
+    },
+    {
+      "id": "hub5",
+      "topic": "Romantic Retreats",
+      "spokes": [
+        { "id": "s81", "topic": "Stargazing Domes" },
+        { "id": "s82", "topic": "Private Firepits" },
+        { "id": "s83", "topic": "Couples’ Spa Packages" },
+        { "id": "s84", "topic": "Wine Trails Nearby" },
+        { "id": "s85", "topic": "Secluded Forest Yurts" },
+        { "id": "s86", "topic": "Candlelit Cabins" },
+        { "id": "s87", "topic": "Outdoor Baths" },
+        { "id": "s88", "topic": "Sunset Viewing Decks" },
+        { "id": "s89", "topic": "Heart-Shaped Jacuzzis" },
+        { "id": "s90", "topic": "Anniversary Packages" },
+        { "id": "s91", "topic": "Riverfront Cabins" },
+        { "id": "s92", "topic": "Surprise Proposals" },
+        { "id": "s93", "topic": "Couples Cooking Classes" },
+        { "id": "s94", "topic": "Champagne Welcome" },
+        { "id": "s95", "topic": "Horse Carriage Rides" }
+      ]
+    },
+    {
+      "id": "hub6",
+      "topic": "National Parks",
+      "spokes": [
+        { "id": "s101", "topic": "Yosemite Glamping Cabins" },
+        { "id": "s102", "topic": "Zion Safari Tents" },
+        { "id": "s103", "topic": "Yellowstone Tipis" },
+        { "id": "s104", "topic": "Grand Canyon Domes" },
+        { "id": "s105", "topic": "Glacier National Park Yurts" },
+        { "id": "s106", "topic": "Great Smoky Mountains Cabins" },
+        { "id": "s107", "topic": "Joshua Tree Stargazing Domes" },
+        { "id": "s108", "topic": "Everglades Eco Pods" },
+        { "id": "s109", "topic": "Rocky Mountain Treehouses" },
+        { "id": "s110", "topic": "Arches Desert Lodges" },
+        { "id": "s111", "topic": "Grand Teton Safari Camps" },
+        { "id": "s112", "topic": "Olympic Rainforest Yurts" },
+        { "id": "s113", "topic": "Sequoia Cabins" },
+        { "id": "s114", "topic": "Acadia Coastal Domes" },
+        { "id": "s115", "topic": "Bryce Canyon Tiny Cabins" }
+      ]
+    },
+    {
+      "id": "hub7",
+      "topic": "Seasonal Itineraries",
+      "spokes": [
+        { "id": "s121", "topic": "Winter Snow Domes" },
+        { "id": "s122", "topic": "Spring Wildflower Camps" },
+        { "id": "s123", "topic": "Summer Lakefront Yurts" },
+        { "id": "s124", "topic": "Fall Foliage Cabins" },
+        { "id": "s125", "topic": "Holiday Retreats" },
+        { "id": "s126", "topic": "Valentine Packages" },
+        { "id": "s127", "topic": "Easter Camps" },
+        { "id": "s128", "topic": "Thanksgiving Cabins" },
+        { "id": "s129", "topic": "Halloween Treehouses" },
+        { "id": "s130", "topic": "Fourth of July Domes" },
+        { "id": "s131", "topic": "Memorial Day Camping" },
+        { "id": "s132", "topic": "Labor Day Escapes" },
+        { "id": "s133", "topic": "New Year’s Yurts" }
+      ]
+    },
+    {
+      "id": "hub8",
+      "topic": "Glamping Gear Guides",
+      "spokes": [
+        { "id": "s141", "topic": "Best Glamping Tents" },
+        { "id": "s142", "topic": "Solar Power Kits" },
+        { "id": "s143", "topic": "Portable Heaters" },
+        { "id": "s144", "topic": "Luxury Bedding" },
+        { "id": "s145", "topic": "Portable Showers" },
+        { "id": "s146", "topic": "Outdoor Kitchens" },
+        { "id": "s147", "topic": "Eco Toilets" },
+        { "id": "s148", "topic": "Portable Fans" },
+        { "id": "s149", "topic": "Off-Grid Generators" },
+        { "id": "s150", "topic": "Camping Furniture" },
+        { "id": "s151", "topic": "LED Lighting" },
+        { "id": "s152", "topic": "Water Purifiers" },
+        { "id": "s153", "topic": "Bluetooth Speakers" },
+        { "id": "s154", "topic": "Bug Repellent Systems" },
+        { "id": "s155", "topic": "All-Weather Gear" }
+      ]
+    },
+    {
+      "id": "hub9",
+      "topic": "Pet-Friendly Stays",
+      "spokes": [
+        { "id": "s161", "topic": "Dog-Friendly Yurts" },
+        { "id": "s162", "topic": "Fenced Cabins" },
+        { "id": "s163", "topic": "Pet Amenities" },
+        { "id": "s164", "topic": "Pet-Sitting Services" },
+        { "id": "s165", "topic": "Nearby Dog Parks" },
+        { "id": "s166", "topic": "Pet-Friendly Trails" },
+        { "id": "s167", "topic": "Pet Welcome Kits" },
+        { "id": "s168", "topic": "Dog Wash Stations" },
+        { "id": "s169", "topic": "Pet-Friendly Beaches" },
+        { "id": "s170", "topic": "Leash-Free Zones" },
+        { "id": "s171", "topic": "Pet Insurance Accepted" }
+      ]
+    },
+    {
+      "id": "hub10",
+      "topic": "Sustainable Stays",
+      "spokes": [
+        { "id": "s181", "topic": "Solar-Powered Cabins" },
+        { "id": "s182", "topic": "Compost Toilets" },
+        { "id": "s183", "topic": "Rainwater Collection" },
+        { "id": "s184", "topic": "Greywater Systems" },
+        { "id": "s185", "topic": "Recycled Materials" },
+        { "id": "s186", "topic": "Organic Gardens" },
+        { "id": "s187", "topic": "Wildlife Conservation Support" },
+        { "id": "s188", "topic": "Carbon-Neutral Lodges" },
+        { "id": "s189", "topic": "Plastic-Free Policies" },
+        { "id": "s190", "topic": "Local Food Sourcing" }
+      ]
+    },
+    {
+      "id": "hub11",
+      "topic": "Unique Structures",
+      "spokes": [
+        { "id": "s201", "topic": "Domes" },
+        { "id": "s202", "topic": "Treehouses" },
+        { "id": "s203", "topic": "A-Frames" },
+        { "id": "s204", "topic": "Tipis" },
+        { "id": "s205", "topic": "Converted Silos" },
+        { "id": "s206", "topic": "Floating Cabins" },
+        { "id": "s207", "topic": "Hobbit Houses" },
+        { "id": "s208", "topic": "Ice Domes" },
+        { "id": "s209", "topic": "Converted Barns" },
+        { "id": "s210", "topic": "Historic Train Cars" }
+      ]
+    },
+    {
+      "id": "hub12",
+      "topic": "Adventure Activities",
+      "spokes": [
+        { "id": "s221", "topic": "Guided Hikes" },
+        { "id": "s222", "topic": "Ziplining" },
+        { "id": "s223", "topic": "Kayaking" },
+        { "id": "s224", "topic": "Horseback Riding" },
+        { "id": "s225", "topic": "Mountain Biking" },
+        { "id": "s226", "topic": "Climbing Tours" },
+        { "id": "s227", "topic": "Fishing Excursions" },
+        { "id": "s228", "topic": "Bird Watching" },
+        { "id": "s229", "topic": "Photography Tours" },
+        { "id": "s230", "topic": "ATV Rides" }
+      ]
+    },
+    {
+      "id": "hub13",
+      "topic": "Trip Planning",
+      "spokes": [
+        { "id": "s241", "topic": "Packing Lists" },
+        { "id": "s242", "topic": "Travel Insurance" },
+        { "id": "s243", "topic": "Local Transportation" },
+        { "id": "s244", "topic": "Permits & Passes" },
+        { "id": "s245", "topic": "Best Travel Seasons" },
+        { "id": "s246", "topic": "Emergency Preparedness" },
+        { "id": "s247", "topic": "Currency & Payments" },
+        { "id": "s248", "topic": "Health & Safety Tips" },
+        { "id": "s249", "topic": "Custom Itineraries" },
+        { "id": "s250", "topic": "Map & Navigation Apps" }
+      ]
+    },
+    {
+      "id": "hub14",
+      "topic": "Culinary Experiences",
+      "spokes": [
+        { "id": "s261", "topic": "Farm-to-Table Meals" },
+        { "id": "s262", "topic": "Local Wine Tastings" },
+        { "id": "s263", "topic": "Foraging Tours" },
+        { "id": "s264", "topic": "Outdoor Cooking Classes" },
+        { "id": "s265", "topic": "Campfire Dining" },
+        { "id": "s266", "topic": "Craft Beer Tastings" },
+        { "id": "s267", "topic": "Wild Game BBQs" },
+        { "id": "s268", "topic": "Vegetarian Retreats" },
+        { "id": "s269", "topic": "Picnic Hampers" },
+        { "id": "s270", "topic": "Chef-Led Wine Pairings" }
+      ]
+    },
+    {
+      "id": "hub15",
+      "topic": "Wellness Retreats",
+      "spokes": [
+        { "id": "s281", "topic": "Morning Yoga Domes" },
+        { "id": "s282", "topic": "Meditation Yurts" },
+        { "id": "s283", "topic": "Sound Bath Experiences" },
+        { "id": "s284", "topic": "Forest Bathing" },
+        { "id": "s285", "topic": "Ayurvedic Healing" },
+        { "id": "s286", "topic": "Spa Cabins" },
+        { "id": "s287", "topic": "Detox Programs" },
+        { "id": "s288", "topic": "Digital Detox Retreats" },
+        { "id": "s289", "topic": "Holistic Nutrition" },
+        { "id": "s290", "topic": "Breathwork Sessions" }
+      ]
+    }
+  ]
+}

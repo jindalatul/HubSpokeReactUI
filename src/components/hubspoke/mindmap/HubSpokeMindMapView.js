@@ -7,9 +7,13 @@ import transformToJsMind from "./convertFormat.js";
 
 import SimpleMindMap from "./HubSpokeMindMap.js";
 
-export default function HubSpokeMindMapView({hubSpokesData})
+export default function HubSpokeMindMapView(props)
 {
-        const jsMindArray = transformToJsMind(hubSpokesData, {
+    const [openItemId, setOpenItemId] = useState(props.hubSpokesData.hubs[0].id);
+    
+        //props.sidebarAction(true);
+
+        const jsMindArray = transformToJsMind(props.hubSpokesData, {
             rootId: "glamping_root",
             rootTopic: "Glamping Master Map",
             format: "node_array",
@@ -21,7 +25,7 @@ export default function HubSpokeMindMapView({hubSpokesData})
     return (
         <>
                 <div style={{ width: "100vw", height: "100vh" }}>
-                    <SimpleMindMap mindmap={jsMindArray} />
+                    <SimpleMindMap mindmap={jsMindArray} handleHubSpokeMindMapClick = {props.sidebarAction} />
                 </div>
         </>
      );
