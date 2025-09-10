@@ -79,7 +79,9 @@ return (
 
         <div id="kwUpsell" className="upsell" ref={kwUpsell}
               style={{display: "none"}}>
-          Keyword data is a <strong>Premium</strong> feature. 
+          Keyword data is a&nbsp;<a target="_blank"
+               style={{color:"#000",textDecoration: "none"}} 
+               href="http://convertrank.com/premium-feature"><strong>Premium</strong> feature</a>. 
         </div>
         <div id="kwHint" className="hint" ref={kwHint}
             style={{display: "none"}}>
