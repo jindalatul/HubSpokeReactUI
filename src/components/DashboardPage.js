@@ -19,7 +19,6 @@ import HubSpokeAccordion from "./hubspoke/accordion/hubspokeAccordion.js";
 export default function DashboardPage()
 {
     const [showFirstView, setShowFirstView] = useState(true);
-
     const [hubSpokeData, setHubSpokeData] = useState({});
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -64,6 +63,7 @@ export default function DashboardPage()
     return (
         <>
             <TopNav></TopNav>
+
                 <div style={{
                         paddingLeft: "10px",
                         paddingTop: "10px",

@@ -6,6 +6,10 @@ function SeedTopicForm()
   const kwUpsell = useRef(null);
   const kwHint = useRef(null);
 
+  const [showPersonalizationForm, setShowPersonalizationForm] = useState(false);
+  const [showTooltip, setShowTooltip] = useState(false);
+  const [checkboxQuestionsToggle, setCheckboxQuestionsToggle] = useState(false);
+
   const navigate = useNavigate();
 
   const isUserPremium=false;
@@ -21,7 +25,10 @@ function SeedTopicForm()
     navigate(`/dashboard/${projectId}`);        // Go to /hub-spoke page and put the seed in the URL
   };
 
-
+  const showHideToolTip =(input) => {
+    setShowTooltip(input);
+    //alert(input);
+  }
 
   const handleKeywordClick = () => {
     if(isUserPremium!=true) 
@@ -43,9 +50,9 @@ function SeedTopicForm()
 return (
 <form>
   <div className="wrap main-form">
-    <div className="section">
-      <h1>Generate your Hub‑Spoke</h1>
-      <p>Enter a seed keyword or topic to get started.</p>
+    <div className="section" style={{marginTop:"60px"}}>
+      <h1>Build Content for your Website</h1>
+      <p>Enter topic to get started.</p>
     
       <div className="row" id="searchRow">
         <input id="seedInput" className="input" type="text" placeholder="e.g., AI in Marketing" />
@@ -69,6 +76,7 @@ return (
         </button>
         <button className="btn-form primary" onClick={handleFormSubmit}>Generate</button>
       </div>
+
         <div id="kwUpsell" className="upsell" ref={kwUpsell}
               style={{display: "none"}}>
           Keyword data is a <strong>Premium</strong> feature. 
@@ -77,7 +85,95 @@ return (
             style={{display: "none"}}>
               Will fetch keyword metrics in the background.
         </div>
-  </div>  
+
+      {/*<!-- Personalization toggle + tooltip --> */}
+      {showPersonalizationForm && (
+      <div className="controls">
+        <label className="switch">
+          <input type="checkbox" id="personalizeToggle" 
+                 checked={checkboxQuestionsToggle}
+                 onChange={(e) => setCheckboxQuestionsToggle(e.target.checked)} />
+          <span className="slider"></span>
+        </label>
+        <span className="label">Personalize content generation</span>
+        <button className="info-btn" id="infoBtn"
+                onClick={() => setShowTooltip((prev) => !prev)} // toggle on click
+                onMouseEnter={() => showHideToolTip(true)}    // show on hover //setShowTooltip(true)
+                onMouseLeave={() => showHideToolTip(false)}      // hide on mouse leave
+              >i</button>
+
+          {/* Tooltip */}
+          {showTooltip && (
+            <div className="tooltip"
+                style={{ 
+                  display:"block"
+                }}
+            >
+              <h4>Personalize your hub‑spoke</h4>
+              <p>Answer a few quick questions about your role, audience, and goals to tailor clusters & briefs.</p>
+              <ul>
+                <li>More relevant subtopics</li>
+                <li>Better briefs & tone</li>
+                <li>Smarter linking suggestions</li>
+              </ul>
+              <small>Demo note: answers stay in your browser.</small>
+          </div>
+          )}
+      </div>
+    )}
+
+    {/*<!-- Advanced questionnaire (animated) --> */}
+
+    {checkboxQuestionsToggle && (
+      <div className="advanced" 
+      style={{ 
+        display: "block",
+        height:"550px",
+        opacity:"1",
+        transform:"translateY(0)"
+       }}
+      >
+        <h3>Your Persona</h3>
+        <div className="field">
+          <label htmlFor="role">Your Role</label>
+          <select id="role">
+            <option>Founder</option><option>Marketing Manager</option><option>Content Strategist</option><option>Solo Creator</option><option>Other</option>
+          </select>
+        </div>
+        <div className="field">
+          <label htmlFor="industry">Industry</label>
+          <input type="text" id="industry" placeholder="e.g., SaaS, Healthcare, Finance" />
+        </div>
+
+        <h3>Your Audience</h3>
+        <div className="field">
+          <label htmlFor="audience">Primary Audience</label>
+          <select id="audience">
+            <option>B2B Buyers</option><option>Consumers</option><option>Students</option><option>Tech Professionals</option><option>Other</option>
+          </select>
+        </div>
+        <div className="field">
+          <label htmlFor="pain">Biggest Pain Point</label>
+          <textarea id="pain" placeholder="Describe the main challenge your audience faces"></textarea>
+        </div>
+
+        <h3>Your Goals</h3>
+        <div className="field">
+          <label htmlFor="goal">Main Goal</label>
+          <select id="goal">
+            <option>Drive Traffic</option><option>Generate Leads</option><option>Build Authority</option><option>Educate</option><option>Convert Customers</option>
+          </select>
+        </div>
+        <div className="field">
+          <label htmlFor="tone">Preferred Tone</label>
+          <select id="tone">
+            <option>Professional</option><option>Conversational</option><option>Storytelling</option><option>Technical</option>
+          </select>
+        </div>
+      </div>
+      )}
+
+    </div>  
   </div>
   </form>
   );
